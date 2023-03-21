@@ -1,0 +1,25 @@
+.me-btn {
+  width: 100%;
+  border-radius: 7px;
+  //display: inline-block;
+}
+
+.me-btn.me-btn-primary {
+  color: $me-color-white;
+  background-color: $me-color-primary;
+}
+
+.me-btn-fluid {
+  display: inline-block;
+  border-radius: 7px;
+}
+.me-btn-fluid.me-btn-primary {
+  font-size: 14px;
+  color: $me-color-white;
+  background-color: $me-color-primary;
+}
+.me-btn-fluid.me-btn-primary {
+  font-size: 14px;
+  color: $me-color-white;
+  background-color: $me-color-primary;
+}

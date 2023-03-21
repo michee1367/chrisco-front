@@ -1,0 +1,332 @@
+/*
+    ADDITIONAL DEMO STYLE, NOT IMPORTANT TO MAKE THINGS WORK BUT TO MAKE IT A BIT NICER :)
+*/
+//@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+$group-lnk-bg : rgba(255, 255, 255, 0.05);
+$group-lnk-bg-active : rgba(255, 255, 255, 0.2);
+$link-sidebar-color : rgba(255, 255, 255, 0.8);
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+/*
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}*/
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#sidebar.report {
+    min-width: 300pt;
+    max-width: 300pt;
+}
+
+ #sidebar.not-report {
+    min-width: 150pt;
+    max-width: 150pt;
+}
+
+#sidebar {
+    //min-width: 150pt;
+    //max-width: 150pt;
+    display: block;
+    position: relative;
+    /* don't forget to add all the previously mentioned styles here too */
+    background: white;
+    color: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s;
+    z-index: 9;
+
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    //border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+}
+
+#sidebar .sidebar-header {
+    background: white;
+    height: 45pt;
+    //border-bottom: 1px solid #0083B3;
+    //border: 1px solid black;
+}
+/*
+#sidebar ul.components {
+    //border-bottom: 1px solid #47748b;
+}*/
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    //padding: 9px;
+    //font-size: 0.7em;
+    display: block;
+
+    background-image: linear-gradient(to right, white 50%, rgba(40,117, 32, 0.01) 50%);
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 0.75s ease-in-out;
+}
+#sidebar ul li a:hover {
+    color: #0083B3;
+    background-position: right ;
+    //border-right: 2px solid #0083B3;
+    //background-color: rgba(40,117, 32, 0.3);
+    //background-image: linear-gradient(to left,rgba(40,117, 32, 0.01) , white);
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #0083B3;
+    //background-color: #0083B3; /* For browsers that do not support gradients */
+    background-color: rgba(40,117, 32, 0.01);
+    background-image: linear-gradient(to left,rgba(40,117, 32, 0.01)  , white);
+    border-right: 2px solid #0083B3;
+    font-weight: 700;
+}
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+
+.group-link {
+    background: rgba(40,117, 32, 0.01);
+  }
+  #sidebar .group-link ul li a {
+    //padding: 9px;
+    //font-size: 0.7em;
+    padding-left: 30px !important;
+    display: block;
+    font-size: .85em;
+    background-color: rgba(#0083B3, 0.05);
+
+    background-image: none !important;
+    //background-image: linear-gradient(to right, $sidebar-bg 50%, $link-sidebar-bg-active  50%);
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 0.75s ease-in-out;
+    color: rgba(#0083B3, 0.8);
+  }
+  #sidebar .group-link ul li a:hover {
+    color: #0083B3;
+    background-color: rgba(#0083B3, 0.2);
+    //font-weight: 700;
+    //border-right: 2px solid $link-sidebar-color;
+    //background-color: rgba(40,117, 32, 0.3);
+    //background-image: linear-gradient(to left,rgba(40,117, 32, 0.1) , white);
+  }
+  #sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #0083B3;
+    background-color: rgba(#0083B3, 0.2);
+    font-weight: 700;
+    //border-right: 2px solid $link-sidebar-color;
+    //background-color: rgba(40,117, 32, 0.3);
+    //background-image: linear-gradient(to left,rgba(40,117, 32, 0.1) , white);
+  }
+
+
+@media (max-width: 991px) {
+    .wrapper {
+        display: block;
+    }
+
+    #content div {
+        //z-index: 9;
+    }
+
+    #dismiss {
+        /*width: 35px;
+        height: 35px;*/
+        position: absolute;
+        /* top right corner of the sidebar */
+        top: 10px;
+        right: 10px;
+    }
+
+    .me-main {
+        z-index: 9;
+    }
+
+
+    #sidebar {
+        min-height: 100vh;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        /* top layer */
+        z-index: 999;
+    }
+    #sidebar.report {
+        //margin-left: -175px;
+        margin-left: -300pt;
+    }
+    #sidebar.not-report {
+        //margin-left: -175px;
+        margin-left: -150pt;
+    }
+
+    #sidebar.report.active, #sidebar.not-report.active {
+        margin-left: 0;
+    }
+
+
+    .overlay {
+        display: none;
+        position: fixed;
+        /* full screen */
+        width: 100vw;
+        height: 100vh;
+        /* transparent black */
+        background: rgba(0, 0, 0, 0.7);
+        top: 0px;
+        /* middle layer, i.e. appears below the sidebar */
+        z-index: 99;
+        opacity: 0;
+        /* animate the transition */
+        transition: all 0.5s ease-in-out;
+    }
+    /* display .overlay when it has the .active class */
+    .overlay.active {
+        display: block;
+        opacity: 0.7;
+    }
+    /*
+    */
+    .me-icon-menu {
+        display: inline;
+    }
+    .me-main {
+        z-index: 9;
+    }
+
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 992px) {
+    .wrapper {
+        display: flex;
+        width: 100%;
+    }
+    .wrapper.report {
+        padding-left: 300pt;
+    }
+
+    .wrapper.not-report {
+        padding-left: 150pt;
+    }
+    #sidebar .sidebar-header {
+        //border-bottom: 1px solid #0083B3;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        //border: 1px solid black;
+    }
+    .me-main {
+        z-index: 9;
+    }
+
+
+    #sidebar.report {
+        min-width: 300pt;
+        max-width: 300pt;
+    }
+
+     #sidebar.not-report {
+        min-width: 150pt;
+        max-width: 150pt;
+    }
+
+
+    #sidebar {
+        position: fixed;
+        top: 0;
+        //display: none;
+        left: 0;
+        /* don't forget to add all the previously mentioned styles here too */
+        background: white;
+        color: rgba(0, 0, 0, 0.8);
+       // z-index: 999;
+        transition: all 0.3s;
+        min-height: 100vh;
+
+    }
+
+    /*#sidebar {
+        min-height: 100vh;
+    }
+
+    #sidebar.active {
+        margin-left: -175px;
+    }*/
+    #dismiss {
+        position: absolute;
+        /* top right corner of the sidebar */
+        display: none;
+        top: 10px;
+        right: 10px;
+    }
+    /*
+    */
+    .me-icon-menu {
+        display: none;
+    }
+
+
+ }
+
+
+ .sidebar-grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    //justify-content: space-between;
+    //gap: 10px;
+    //border-bottom: 1px solid #0083B3;
+    /*border-left: 1px solid rgba(0, 0, 0, 0.2);*/
+}
+
+.sidebar-grid-container .part-1 {
+
+}
+.sidebar-grid-container .part-2 {
+
+}
+
+
+#sidebar .sidebar-header h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: $me-color-primary;
+  text-align: center;
+}

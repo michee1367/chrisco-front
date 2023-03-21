@@ -1,0 +1,76 @@
+.login-container {
+  height: 100vh;
+  width: 100vw;
+}
+.login-row-detail {
+  background-color: $me-color-primary;
+}
+.login-row-form {
+  background-color: $me-color-white;
+//
+}
+.login-row-form .login-form-container {
+
+}
+.login-row-form .login-form-container h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: $me-color-primary;
+}
+.login-row-form .login-form-container h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+.login-row-detail .detail-container{
+  width: 60%;
+  height: 70%;
+  background: transparent;
+  background-color: $me-color-blue-low;
+  color: $me-color-white ;
+}
+.login-row-detail .detail-container h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+.login-row-detail .detail-container h1 span {
+  color: #fa9b00;
+}
+.login-row-detail .detail-container p {
+  font-weight: 100;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+}
+.login-form-container .separator {
+  border-bottom: 1px solid $me-color-black-slow;
+}
+.login-form-container .separator .text {
+  //background-color: #fff;
+  position: relative;
+  bottom: -10px;
+  //width: 10%;
+}
+
+.login-form-container .separator .text span {
+  background-color: #fff;
+}
+
+@media (max-width: 991px)
+{
+  .login-row {
+    width: 100%;
+  }
+  .login-row-detail {
+    display: none !important;
+  }
+}
+@media (min-width: 992px)
+{
+  .login-row {
+    width: 50%;
+  }
+  .login-row-detail {
+    display: block;
+  }
+
+}

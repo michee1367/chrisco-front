@@ -1,0 +1,18 @@
+@import "~bootstrap/scss/bootstrap";
+@import "variables";
+@import "login";
+@import "input";
+@import "btn";
+@import "table";
+@import "sidebar-and-main-panel";
+
+//_login
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+body {
+  color: $me-color-black;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
